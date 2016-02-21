@@ -54,7 +54,12 @@ class ArticlesController < ApplicationController
   end
 
   def create_tag
-    @article.tags.create(value: params[:tag_value])
+    tag = Tag.where('value = ?', params[:tag_value])
+    if tag.exists?
+      @article.tags << tag
+    else
+      @article.tags.create(value: params[:tag_value])
+    end
     redirect_to articles_path
   end
 
