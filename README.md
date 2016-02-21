@@ -2,9 +2,9 @@
 
 Submitted by: **Kha Nguyen**
 
-Time spent: **2** hours spent in total
+Time spent: **4** hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: **https://desolate-atoll-15805.herokuapp.com/articles**
 
 ## User Stories
 
