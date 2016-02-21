@@ -5,10 +5,14 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    if params[:searchKeyword].blank?
+    if params[:titleKeyword].blank? and params[:tagKeyword].blank?
       @articles = Article.all
+    elsif params[:tagKeyword].blank?
+      @articles = Article.where('title LIKE ?', "%#{params[:titleKeyword]}%")
+    elsif params[:titleKeyword].blank?
+      @articles = Article.joins(:tags).where('value = ?', params[:tagKeyword])
     else
-      @articles = Article.where('title LIKE ?', "%#{params[:searchKeyword]}%")
+      @articles = Article.joins(:tags).where('value = ? AND title LIKE ?', params[:tagKeyword], "%#{params[:titleKeyword]}%")
     end
   end
 
