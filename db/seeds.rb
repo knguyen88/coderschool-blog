@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Article.create(title: 'Introduction', body: 'Hi, the name is Kha Nguyen, Ruby newbie, Blademaster of Grim Dawn, Bane of the Jedi, and Purger of the Sith. ![profile](/profile.jpeg)' )

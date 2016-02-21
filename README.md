@@ -14,7 +14,7 @@ The following **required** functionality is complete:
 
 * [x] User can create a new post, formatted using the Markdown language.
 * [x] User can edit an existing post.
-* [ ] There is one post that introduces the App Creator with name, picture.
+* [x] There is one post that introduces the App Creator with name, picture.
 * [x] User can delete stories, with an alert that asks the user to confirm.
 * [x] User see a search form on the Posts page.
 * [x] User can submit a search term to find all posts with titles containing the search term.
@@ -33,11 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-> HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:
-> `![Video Walkthrough](walkthrough.gif)`
->
-
-![Video Walkthrough](/path/to/your/gif/file)
+![Video Walkthrough](walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
