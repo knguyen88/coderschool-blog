@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 * [ ] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/.
 * [x] User can see how many views a post has.
 * [x] User can leave a comment on a post.
-* [ ] User can add "tags" to a post, and filter posts by tag.
+* [x] User can add "tags" to a post, and filter posts by tag.
 
 The following **additional** features are implemented:
 
