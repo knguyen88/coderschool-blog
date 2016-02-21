@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :articles
+
+  post 'article/:id/comment', to: 'articles#create_comment', as: 'create_comment'
+  post 'article/:id/tag', to: 'articles#create_tag', as: 'create_tag'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

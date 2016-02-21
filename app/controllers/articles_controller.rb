@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :create_comment, :create_tag]
   before_action :initialize_markdown, only: [:show, :index]
 
   # GET /articles
@@ -42,6 +42,16 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def create_comment
+    Comment.create(body: params[:comment_content], article_id: params[:id])
+    redirect_to articles_path
+  end
+
+  def create_tag
+    @article.tags.create(value: params[:tag_value])
+    redirect_to articles_path
   end
 
   # PATCH/PUT /articles/1
