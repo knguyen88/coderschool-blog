@@ -1,12 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-<h1>Kha's blog</h1>
-<h3>My first Rails application for CoderSchool</h3>
+  <h1>Kha's blog</h1>
+  <h3>My first Rails application for CoderSchool</h3>
 
-<%= render @articles %>
+  <div class="row">
+    <div class="col-md-8">
+      <form class="form-inline" action="<%= articles_path %>" method="get">
+        <input type="text" placeholder="Title" class="form-control" id="searchKeyword" name="searchKeyword"/>
+        <button class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+  <%= render @articles %>
 
-<br>
+  <br>
 
-<%= link_to 'New Article', new_article_path %>
+  <%= link_to 'New Article', new_article_path %>
 </div>
